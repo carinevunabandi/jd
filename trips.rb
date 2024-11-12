@@ -40,13 +40,7 @@ class TubeTrip < Trip
 end
 
 class NilTubeTrip < TubeTrip
-    attr_accessor :bus_no
-    attr_accessor :stop_name
-    
     def initialize
-        # super(transp_mode)
-        @bus_no       = bus_no
-        @stop_name    = stop_name
         @charged_fare = 0
     end
 end
