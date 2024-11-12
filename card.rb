@@ -40,8 +40,4 @@ class Card
     def flush_current_trip
         @current_trip = NilTubeTrip.new
     end
-
-    def trips
-        Trip.all
-    end
 end
