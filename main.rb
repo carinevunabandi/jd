@@ -101,7 +101,6 @@ def prompt_bus_stop_selection
         chevrons_prompt
         bus_stop = convert_selection_to_station_name(gets.chomp)
     end
-    # puts "You are starting your bus journey at #{bus_stop.upcase}"
     bus_stop
 end
 
@@ -131,9 +130,7 @@ def card_tap_out
 end
     
 
-
-
-##### START #####
+######################################### SCRIPT START #########################################
 separator
 puts "*** Welcome to TFL ****"
 separator
