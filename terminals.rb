@@ -1,7 +1,7 @@
 
 class Terminal
     def initialize 
-        @tapped_card   = nil
+        @tapped_card = nil
     end
 
     def set_card card
@@ -13,7 +13,7 @@ class Terminal
         when "BUS"
             return false if @tapped_card.balance < FareCalculator::BUS_FARE
         else
-            return false if @tapped_card.balance <= FareCalculator.min_req_balance_at(zone)
+            return false if @tapped_card.balance < FareCalculator.min_req_balance_at(zone)
         end
         true
     end
