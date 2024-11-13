@@ -75,7 +75,7 @@ RSpec.describe 'Card' do
     end
 
     describe "#conclude_tube_trip" do
-        it "invokes a method on the current_trip_instance to set the End of trip Station Name and Station Zone" do
+        it "sets the end_station on the current_trip instance" do
             expect(card.current_trip).to receive(:set_end_of_trip_station).with(end_station_name, end_station_zone)
             card.conclude_tube_trip(end_station_name, end_station_zone)
         end
