@@ -197,7 +197,7 @@ while continue_travelling == true
             tap_outcome = @terminal.tap(@card)
             print_spending_and_balance(@card)
         else
-            puts "You're a thief!"
+            puts "*** WARNING: You did not tap in! Not very honest of you ..."
             print_spending_and_balance(@card)
         end
     when "3"
