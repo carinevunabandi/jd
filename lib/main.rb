@@ -1,10 +1,9 @@
 #!/usr/bin/ruby
 
-# require "byebug"
-require "./card"
-require "./terminals"
-require "./fare_calculator"
-require "./trips"
+require "./lib/card"
+require "./lib/terminals"
+require "./lib/fare_calculator"
+require "./lib/trips"
 
 
 STATIONS = {
