@@ -11,8 +11,8 @@ class BusTrip < Trip
     attr_accessor :bus_no
     attr_accessor :stop_name
     
-    def initialize bus_no, stop_name, transp_mode
-        super(transp_mode)
+    def initialize bus_no, stop_name
+        super(:bus)
         @bus_no       = bus_no
         @stop_name    = stop_name
         @charged_fare = FareCalculator::BUS_FARE
@@ -24,10 +24,9 @@ class TubeTrip < Trip
     attr_accessor :start_station_zone
     attr_accessor :end_station_name
     attr_accessor :end_station_zone
-
     
-    def initialize start, zone, transp_mode
-        super(transp_mode)
+    def initialize start, zone
+        super(:tube)
         @start_station_name = start
         @start_station_zone = zone
         @charged_fare       = FareCalculator::MAX_FARE
@@ -41,6 +40,6 @@ end
 
 class NilTubeTrip < TubeTrip
     def initialize
-        @charged_fare = 0
+        @charged_fare = 0.0
     end
 end
