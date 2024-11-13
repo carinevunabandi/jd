@@ -8,12 +8,12 @@ class Card
     end
 
     def initiate_bus_trip(bus_no, stop_name)
-        @current_trip = BusTrip.new(stop_name, bus_no, :bus)
+        @current_trip = BusTrip.new(stop_name, bus_no)
         reduce_balance(@current_trip.charged_fare)
     end
 
     def initiate_tube_trip(station_name, station_zone)
-        @current_trip = TubeTrip.new(station_name, station_zone, :tube)
+        @current_trip = TubeTrip.new(station_name, station_zone)
         reduce_balance(@current_trip.charged_fare)
     end
 
