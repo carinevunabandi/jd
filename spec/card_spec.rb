@@ -91,6 +91,12 @@ RSpec.describe 'Card' do
             expect(card.current_trip.charged_fare).to eq 3
         end
 
+        it "adjusts the balance on the card based on the actual amount charged on the current trip" do
+            allow(FareCalculator).to receive(:fare_for).with(card.current_trip).and_return(3)
+            card.conclude_tube_trip(end_station_name, end_station_zone)
+            expect(card.balance).to eq 7
+        end
+
         context "concluding a trip that when card was tapped at entry" do
             it "invokes setting the end of trip on an TubeTrip instance" do
                 card.initiate_tube_trip(start_station_name, start_station_zone)
@@ -104,14 +110,6 @@ RSpec.describe 'Card' do
                 card.conclude_tube_trip(end_station_name, end_station_zone)
                 expect(card.current_trip).to be_an_instance_of NilTubeTrip
             end
-        end
-    end
-
-    describe "#adjust_charged_tube_fare" do
-        it "adjusts the balance on the card based on the actual amount charged for the trip" do
-            allow(card.current_trip).to receive(:charged_fare).and_return(3)
-            card.adjust_charged_tube_fare(7)
-            expect(card.balance).to eq 6
         end
     end
 

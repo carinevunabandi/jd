@@ -24,11 +24,6 @@ class Card
         @current_trip.charged_fare = calculated_fare
     end
 
-    def adjust_charged_tube_fare(calculated_fare)
-        load_balance(@current_trip.charged_fare)
-        reduce_balance(calculated_fare)
-    end
-
     def load_balance amount
         @balance = @balance + amount.to_f
     end
@@ -39,5 +34,12 @@ class Card
 
     def flush_current_trip
         @current_trip = NilTubeTrip.new
+    end
+
+    private
+
+    def adjust_charged_tube_fare(calculated_fare)
+        load_balance(@current_trip.charged_fare)
+        reduce_balance(calculated_fare)
     end
 end
