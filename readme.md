@@ -1,5 +1,23 @@
 Oyster Card Coding Test
 -----------------------
+To run the little program:
+
+1. Clone project:
+git@github.com:carinevunabandi/jd.git
+
+2. Install gems:
+bundle install --path vendor/bundle
+
+3. Run Tests - if you desire
+bundle exec rspec
+
+4. Execute program:
+ruby lib/main.rb
+
+Please read below for an understanding of what the task was.
+
+Interview Task
+--------------
 We'd like you to model the following fare card system, a limited version of London’s Oyster card system. At your interview, you should be able to demonstrate a user loading a card with £30, taking the following trips, and then viewing the balance.
 
 •	Tube: Holborn to Earl’s Court
@@ -44,5 +62,3 @@ Some things to remember:
 •	Don't worry about making pristine examples, saying "this bit doesn't look quite right because...., therefore I would...." as part of your demonstration is fine and is a good talking point.
 •	Don't be afraid to talk about things you didn't do but would have done if doing this for real.
 •	More broadly, the goal here is to allow you to express your approach and thought process to the panel. The actual final product is secondary to this.
-
-
