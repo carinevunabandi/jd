@@ -1,5 +1,5 @@
 Oyster Card Coding Test
-
+-----------------------
 We'd like you to model the following fare card system, a limited version of London’s Oyster card system. At your interview, you should be able to demonstrate a user loading a card with £30, taking the following trips, and then viewing the balance.
 
 •	Tube: Holborn to Earl’s Court
